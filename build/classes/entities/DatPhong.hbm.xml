@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 23, 2017 1:22:01 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="QuanLyKhachSan" dynamic-insert="false" dynamic-update="false" mutable="true" name="entities.DatPhong" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="DatPhong">
+        <id name="maDp" type="string">
+            <column length="7" name="MaDP"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="entities.KhachHang" embed-xml="true" fetch="select" insert="true" name="khachHang" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="7" name="MaKH" not-null="true"/>
+        </many-to-one>
+        <many-to-one class="entities.LoaiPhong" embed-xml="true" fetch="select" insert="true" name="loaiPhong" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column length="7" name="MaLoai" not-null="true"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="ngayDp" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="NgayDP" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="ngayDen" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="NgayDen" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="ngayDi" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="NgayDi" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="slNguoi" optimistic-lock="true" type="int" unique="false">
+            <column name="slNguoi" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

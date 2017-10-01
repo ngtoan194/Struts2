@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Aug 23, 2017 1:22:01 PM by Hibernate Tools 5.2.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="QuanLyKhachSan" dynamic-insert="false" dynamic-update="false" mutable="true" name="entities.TaiKhoan" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="TaiKhoan">
+        <id name="maTk" type="string">
+            <column length="7" name="MaTK"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="username" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="Username" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="pass" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="Pass" not-null="true"/>
+        </property>
+        <property generated="never" lazy="false" name="typeTk" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="TypeTK"/>
+        </property>
+        <property generated="never" lazy="false" name="trangThai" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="TrangThai"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="nhanViens" optimistic-lock="true" sort="unsorted" table="NhanVien">
+            <key on-delete="noaction">
+                <column length="7" name="MaTK" not-null="true"/>
+            </key>
+            <one-to-many class="entities.NhanVien" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="khachHangs" optimistic-lock="true" sort="unsorted" table="KhachHang">
+            <key on-delete="noaction">
+                <column length="7" name="MaTK" not-null="true"/>
+            </key>
+            <one-to-many class="entities.KhachHang" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

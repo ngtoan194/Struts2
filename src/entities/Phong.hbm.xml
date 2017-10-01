@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 23, 2017 1:22:01 PM by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+ <class catalog="QuanLyKhachSan" name="entities.Phong" table="Phong">
+  <id name="maPhong" type="string">
+   <column length="7" name="MaPhong"/>
+   <generator class="assigned"/>
+  </id>
+  <many-to-one class="entities.LoaiPhong" fetch="select" name="loaiPhong">
+   <column length="7" name="MaLoai" not-null="true"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="tenPhong" type="string">
+   <column name="TenPhong" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="anh" type="string">
+   <column name="Anh" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="gioithieu" type="string">
+   <column name="Gioithieu" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="slphong" type="int">
+   <column name="slphong" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="slnguoi" type="int">
+   <column name="slnguoi" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="gia" type="double">
+   <column name="gia" not-null="true" precision="53" scale="0"/>
+  </property>
+  <property generated="never" lazy="false" name="mota1" type="string">
+   <column name="mota1" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="mota2" type="string">
+   <column name="mota2" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="mota3" type="string">
+   <column name="mota3" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="mota4" type="string">
+   <column name="mota4" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="mota5" type="string">
+   <column name="mota5" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="mota6" type="string">
+   <column name="mota6" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="mota7" type="string">
+   <column name="mota7" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich1" type="string">
+   <column name="tienich1" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich2" type="string">
+   <column name="tienich2" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich3" type="string">
+   <column name="tienich3" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich4" type="string">
+   <column name="tienich4" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich5" type="string">
+   <column name="tienich5" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich6" type="string">
+   <column name="tienich6" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich7" type="string">
+   <column name="tienich7" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich8" type="string">
+   <column name="tienich8" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich9" type="string">
+   <column name="tienich9" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tienich10" type="string">
+   <column name="tienich10" not-null="true"/>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="thanhToans"
+   sort="unsorted" table="ThanhToan">
+   <key>
+    <column length="7" name="MaPhong"/>
+   </key>
+   <one-to-many class="entities.ThanhToan"/>
+  </set>
+ </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 23, 2017 1:22:01 PM by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+ <class catalog="QuanLyKhachSan" name="entities.LoaiPhong" table="LoaiPhong">
+  <id name="maLoai" type="string">
+   <column length="7" name="MaLoai"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="tenLoai" type="string">
+   <column name="TenLoai" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="moTa" type="string">
+   <column name="MoTa" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="anh" type="string">
+   <column name="anh"/>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="datPhongs"
+   sort="unsorted" table="DatPhong">
+   <key>
+    <column length="7" name="MaLoai" not-null="true"/>
+   </key>
+   <one-to-many class="entities.DatPhong"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="phongs"
+   sort="unsorted" table="Phong">
+   <key>
+    <column length="7" name="MaLoai" not-null="true"/>
+   </key>
+   <one-to-many class="entities.Phong"/>
+  </set>
+ </class>
+</hibernate-mapping>

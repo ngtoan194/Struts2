@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 23, 2017 1:22:01 PM by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+ <class catalog="QuanLyKhachSan" name="entities.KhachHang" table="KhachHang">
+  <id name="maKh" type="string">
+   <column length="7" name="MaKH"/>
+   <generator class="assigned"/>
+  </id>
+  <many-to-one class="entities.TaiKhoan" fetch="select" name="taiKhoan">
+   <column length="7" name="MaTK" not-null="true"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="hoTen" type="string">
+   <column name="HoTen" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="gioiTinh" type="boolean">
+   <column name="GioiTinh" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="diaChi" type="string">
+   <column name="DiaChi" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="sdt" type="string">
+   <column length="11" name="SDT" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="email" type="string">
+   <column length="20" name="Email" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="cmnd" type="string">
+   <column length="15" name="CMND" not-null="true"/>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="datPhongs"
+   sort="unsorted" table="DatPhong">
+   <key>
+    <column length="7" name="MaKH" not-null="true"/>
+   </key>
+   <one-to-many class="entities.DatPhong"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="suDungDvs"
+   sort="unsorted" table="SuDungDV">
+   <key>
+    <column length="7" name="MaKH"/>
+   </key>
+   <one-to-many class="entities.SuDungDv"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="datCocs"
+   sort="unsorted" table="DatCoc">
+   <key>
+    <column length="7" name="MAKH" not-null="true"/>
+   </key>
+   <one-to-many class="entities.DatCoc"/>
+  </set>
+  <set fetch="select" inverse="true" lazy="true" name="thanhToans"
+   sort="unsorted" table="ThanhToan">
+   <key>
+    <column length="7" name="MaKH"/>
+   </key>
+   <one-to-many class="entities.ThanhToan"/>
+  </set>
+ </class>
+</hibernate-mapping>

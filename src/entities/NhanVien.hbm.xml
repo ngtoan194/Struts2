@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 23, 2017 1:22:01 PM by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+ <class catalog="QuanLyKhachSan" name="entities.NhanVien" table="NhanVien">
+  <id name="maNv" type="string">
+   <column length="7" name="MaNV"/>
+   <generator class="assigned"/>
+  </id>
+  <many-to-one class="entities.TaiKhoan" fetch="select" name="taiKhoan">
+   <column length="7" name="MaTK" not-null="true"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="hoTenNv" type="string">
+   <column name="HoTenNV" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="gioiTinh" type="boolean">
+   <column name="GioiTinh" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="diaChi" type="string">
+   <column name="DiaChi" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="sdt" type="string">
+   <column length="11" name="SDT" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="email" type="string">
+   <column length="20" name="Email" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="trangThai" type="java.lang.Boolean">
+   <column name="TrangThai"/>
+  </property>
+ </class>
+</hibernate-mapping>

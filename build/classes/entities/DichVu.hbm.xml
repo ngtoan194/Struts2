@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 23, 2017 1:22:01 PM by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+ <class catalog="QuanLyKhachSan" name="entities.DichVu" table="DichVu">
+  <id name="maDv" type="string">
+   <column length="7" name="MaDV"/>
+   <generator class="assigned"/>
+  </id>
+  <property generated="never" lazy="false" name="tenDv" type="string">
+   <column name="TenDV" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="dvt" type="string">
+   <column name="DVT" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="giaDv" type="big_decimal">
+   <column name="GiaDV" not-null="true" scale="4"/>
+  </property>
+  <property generated="never" lazy="false" name="moTa" type="string">
+   <column name="MoTa" not-null="true"/>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="suDungDvs"
+   sort="unsorted" table="SuDungDV">
+   <key>
+    <column length="7" name="MaDV"/>
+   </key>
+   <one-to-many class="entities.SuDungDv"/>
+  </set>
+ </class>
+</hibernate-mapping>

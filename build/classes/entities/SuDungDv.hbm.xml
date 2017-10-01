@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 23, 2017 1:22:01 PM by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+ <class catalog="QuanLyKhachSan" name="entities.SuDungDv" table="SuDungDV">
+  <id name="maSddv" type="string">
+   <column length="7" name="MaSDDV"/>
+   <generator class="assigned"/>
+  </id>
+  <many-to-one class="entities.DichVu" fetch="select" name="dichVu">
+   <column length="7" name="MaDV"/>
+  </many-to-one>
+  <many-to-one class="entities.KhachHang" fetch="select" name="khachHang">
+   <column length="7" name="MaKH"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="soLuong" type="int">
+   <column name="SoLuong" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="soNguoi" type="int">
+   <column name="SoNguoi" not-null="true"/>
+  </property>
+  <property generated="never" lazy="false" name="tongTien" type="double">
+   <column name="TongTien" not-null="true" precision="53" scale="0"/>
+  </property>
+  <property generated="never" lazy="false" name="ghiChu" type="string">
+   <column name="GhiChu" not-null="true"/>
+  </property>
+  <set fetch="select" inverse="true" lazy="true" name="thanhToans"
+   sort="unsorted" table="ThanhToan">
+   <key>
+    <column length="7" name="MaSDDV"/>
+   </key>
+   <one-to-many class="entities.ThanhToan"/>
+  </set>
+ </class>
+</hibernate-mapping>

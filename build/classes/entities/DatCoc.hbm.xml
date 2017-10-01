@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 23, 2017 1:22:01 PM by Hibernate Tools 5.2.3.Final -->
+<hibernate-mapping>
+ <class catalog="QuanLyKhachSan" name="entities.DatCoc" table="DatCoc">
+  <id name="maDc" type="string">
+   <column length="7" name="MaDC"/>
+   <generator class="assigned"/>
+  </id>
+  <many-to-one class="entities.KhachHang" fetch="select" name="khachHang">
+   <column length="7" name="MAKH" not-null="true"/>
+  </many-to-one>
+  <property generated="never" lazy="false" name="ngayDat" type="timestamp">
+   <column length="23" name="NgayDat"/>
+  </property>
+  <property generated="never" lazy="false" name="soTien" type="big_decimal">
+   <column name="SoTien" scale="4"/>
+  </property>
+  <property generated="never" lazy="false" name="ghichu" type="string">
+   <column name="Ghichu"/>
+  </property>
+  <property generated="never" lazy="false" name="trangThai" type="java.lang.Boolean">
+   <column name="TrangThai"/>
+  </property>
+ </class>
+</hibernate-mapping>
