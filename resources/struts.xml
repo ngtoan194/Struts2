@@ -23,6 +23,8 @@
 		<action name="logout" class="controller.AccountAction" method="logout">
 			<result name="success">/login.jsp</result>
 		</action>
+		
+		<!-- Quản lý loại phòng -->
 		<action name="adminQLLP" class="controller.AdminRoomAction">
 			<result name="success">/adminQLLP.jsp</result>
 		</action>
@@ -30,20 +32,16 @@
 			method="addNew">
 			<result name="success">/adminQLLPaddnew.jsp</result>
 		</action>
-		
 		<action name="process-adminQLLPaddnew" class="controller.AdminRoomAction"
 			method="processaddNew">
 			<result name="input">/adminQLLPaddnew.jsp</result>
 			<result name="error">/adminQLLPaddnew.jsp</result>
 			<result name="success">/adminQLLP.jsp</result>
 		</action>
-		
 		<action name="adminQLLPupdate" class="controller.AdminRoomAction"
 			method="update">
 			<result name="success">/adminQLLPupdate.jsp</result>
 		</action>
-		
-		
 		<action name="process-adminQLLPupdate" class="controller.AdminRoomAction"
 			method="processUpdate">
 			<interceptor-ref name="fileUpload">
@@ -55,23 +53,19 @@
 			<result name="success">/adminQLLP.jsp</result>
 			<result name="input">adminQLLPupdate.jsp</result>
 		</action>
-		
-		
 		<action name="adminQLLPdelete" class="controller.AdminRoomAction"
-			method="delete">
+			method="delete"> 
 			<result name="success">/adminQLLP.jsp</result>
 		</action>
-		
 		<action name="adminQLLPsearch" class="controller.AdminRoomAction"
 			method="search">
 			<result name="success">/adminQLLPsearch.jsp</result>
 		</action>
-		
 		<action name="process-adminQLLPsearch" class="controller.AdminRoomAction"
 			method="processSearch">
 			<result name="success">/adminQLLPsearch.jsp</result>
 		</action>
-
+		<!-- End quản lý loại phòng -->
 
 		<action name="index" class="controller.WelcomeAction">
 			<result name="success">/index.jsp</result>
@@ -83,20 +77,14 @@
 		<action name="booking" class="controller.WelcomeAction" method="booking">
 			<result name="success">/booking.jsp</result>
 		</action>
-
-
-
 		<action name="contact" class="controller.ContactAction">
 			<result name="success">/contact.jsp</result>
 		</action>
-
 		<action name="contact" class="controller.ContactAction"
 			method="sendmail">
 			<result name="success">/contact.jsp</result>
 			<result name="error">/contact.jsp</result>
 		</action>
-
-
 		<action name="rooms" class="controller.RoomAction">
 			<result name="success">/rooms.jsp</result>
 		</action>
@@ -106,6 +94,20 @@
 		<action name="roomdetail" class="controller.RoomAction" method="roomdetail">
 			<result name="success">/roomdetail.jsp</result>
 		</action>
-
+		
+		
+		<!-- Quản lý phòng -->
+		<action name="adminQLP" class="controller.AdminRoom2Action">
+			<result name="success">/adminQLP.jsp</result>
+		</action>
+		<action name="adminQLPaddnew" class="controller.AdminRoom2Action" method="addNew">
+			<result name="success">/adminQLPaddnew.jsp</result>
+		</action>
+		<action name="process-adminQLPaddnew" class="controller.AdminRoom2Action" method="processaddNew">
+			<result name="error">/adminQLPaddnew.jsp</result>
+			<result name="success">/adminQLP.jsp</result>
+		</action>
+		<!-- End quản lý phòng -->
+		
 	</package>
 </struts>

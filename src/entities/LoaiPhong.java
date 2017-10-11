@@ -59,7 +59,7 @@ public class LoaiPhong implements java.io.Serializable {
 		this.maLoai = maLoai;
 	}
 
-	@Column(name = "TenLoai", nullable = false)
+	@Column(name = "TenLoai", nullable = false, length = 20)
 	public String getTenLoai() {
 		return this.tenLoai;
 	}
@@ -68,7 +68,7 @@ public class LoaiPhong implements java.io.Serializable {
 		this.tenLoai = tenLoai;
 	}
 
-	@Column(name = "MoTa", nullable = false)
+	@Column(name = "MoTa")
 	public String getMoTa() {
 		return this.moTa;
 	}

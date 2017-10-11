@@ -15,10 +15,10 @@
    <column name="TenPhong" not-null="true"/>
   </property>
   <property generated="never" lazy="false" name="anh" type="string">
-   <column name="Anh" not-null="true"/>
+   <column name="Anh"/>
   </property>
   <property generated="never" lazy="false" name="gioithieu" type="string">
-   <column name="Gioithieu" not-null="true"/>
+   <column name="Gioithieu"/>
   </property>
   <property generated="never" lazy="false" name="slphong" type="int">
    <column name="slphong" not-null="true"/>
@@ -30,55 +30,55 @@
    <column name="gia" not-null="true" precision="53" scale="0"/>
   </property>
   <property generated="never" lazy="false" name="mota1" type="string">
-   <column name="mota1" not-null="true"/>
+   <column name="mota1"/>
   </property>
   <property generated="never" lazy="false" name="mota2" type="string">
-   <column name="mota2" not-null="true"/>
+   <column name="mota2"/>
   </property>
   <property generated="never" lazy="false" name="mota3" type="string">
-   <column name="mota3" not-null="true"/>
+   <column name="mota3"/>
   </property>
   <property generated="never" lazy="false" name="mota4" type="string">
-   <column name="mota4" not-null="true"/>
+   <column name="mota4"/>
   </property>
   <property generated="never" lazy="false" name="mota5" type="string">
-   <column name="mota5" not-null="true"/>
+   <column name="mota5"/>
   </property>
   <property generated="never" lazy="false" name="mota6" type="string">
-   <column name="mota6" not-null="true"/>
+   <column name="mota6"/>
   </property>
   <property generated="never" lazy="false" name="mota7" type="string">
-   <column name="mota7" not-null="true"/>
+   <column name="mota7"/>
   </property>
   <property generated="never" lazy="false" name="tienich1" type="string">
-   <column name="tienich1" not-null="true"/>
+   <column name="tienich1"/>
   </property>
   <property generated="never" lazy="false" name="tienich2" type="string">
-   <column name="tienich2" not-null="true"/>
+   <column name="tienich2"/>
   </property>
   <property generated="never" lazy="false" name="tienich3" type="string">
-   <column name="tienich3" not-null="true"/>
+   <column name="tienich3"/>
   </property>
   <property generated="never" lazy="false" name="tienich4" type="string">
-   <column name="tienich4" not-null="true"/>
+   <column name="tienich4"/>
   </property>
   <property generated="never" lazy="false" name="tienich5" type="string">
-   <column name="tienich5" not-null="true"/>
+   <column name="tienich5"/>
   </property>
   <property generated="never" lazy="false" name="tienich6" type="string">
-   <column name="tienich6" not-null="true"/>
+   <column name="tienich6"/>
   </property>
   <property generated="never" lazy="false" name="tienich7" type="string">
-   <column name="tienich7" not-null="true"/>
+   <column name="tienich7"/>
   </property>
   <property generated="never" lazy="false" name="tienich8" type="string">
-   <column name="tienich8" not-null="true"/>
+   <column name="tienich8"/>
   </property>
   <property generated="never" lazy="false" name="tienich9" type="string">
-   <column name="tienich9" not-null="true"/>
+   <column name="tienich9"/>
   </property>
   <property generated="never" lazy="false" name="tienich10" type="string">
-   <column name="tienich10" not-null="true"/>
+   <column name="tienich10"/>
   </property>
   <set fetch="select" inverse="true" lazy="true" name="thanhToans"
    sort="unsorted" table="ThanhToan">

@@ -18,12 +18,23 @@
 			<!-- Main -->
 			<div id="main">
 				<div class="cl">&nbsp;</div>
-
+				
+					
+				
 				<!-- Content -->
 				<div id="content">
+					
+					
+					
 					<!-- Box -->
 					<div class="box">
-
+						
+						<div class="box-head">
+							<div class="left">
+								<img src="css/images/back.png"> <a href="adminQLLP.html">Trở về</a>
+							</div>
+						</div>
+							
 						<!-- Table -->
 						<div class="table1">
 							<s:form action="process-adminQLLPsearch" method="post">
@@ -36,7 +47,6 @@
 										<th>Mã loại phòng</th>
 										<th>Tên loại phòng</th>
 										<th>Mô tả</th>
-										<th>Ảnh</th>
 									</tr>
 									<c:choose>
 										<c:when test="${not empty listRoom }">
@@ -45,7 +55,6 @@
 													<td>${room.maLoai }</td>
 													<td>${room.tenLoai }</td>
 													<td>${room.moTa }</td>
-													<td>${room.anh }</td>
 												</tr>
 											</c:forEach>
 										</c:when>

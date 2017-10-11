@@ -151,7 +151,7 @@ public class Phong implements java.io.Serializable {
 		this.tenPhong = tenPhong;
 	}
 
-	@Column(name = "Anh", nullable = false)
+	@Column(name = "Anh")
 	public String getAnh() {
 		return this.anh;
 	}
@@ -160,7 +160,7 @@ public class Phong implements java.io.Serializable {
 		this.anh = anh;
 	}
 
-	@Column(name = "Gioithieu", nullable = false)
+	@Column(name = "Gioithieu")
 	public String getGioithieu() {
 		return this.gioithieu;
 	}
@@ -196,7 +196,7 @@ public class Phong implements java.io.Serializable {
 		this.gia = gia;
 	}
 
-	@Column(name = "mota1", nullable = false)
+	@Column(name = "mota1" )
 	public String getMota1() {
 		return this.mota1;
 	}
@@ -205,7 +205,7 @@ public class Phong implements java.io.Serializable {
 		this.mota1 = mota1;
 	}
 
-	@Column(name = "mota2", nullable = false)
+	@Column(name = "mota2")
 	public String getMota2() {
 		return this.mota2;
 	}
@@ -214,7 +214,7 @@ public class Phong implements java.io.Serializable {
 		this.mota2 = mota2;
 	}
 
-	@Column(name = "mota3", nullable = false)
+	@Column(name = "mota3")
 	public String getMota3() {
 		return this.mota3;
 	}
@@ -223,7 +223,7 @@ public class Phong implements java.io.Serializable {
 		this.mota3 = mota3;
 	}
 
-	@Column(name = "mota4", nullable = false)
+	@Column(name = "mota4")
 	public String getMota4() {
 		return this.mota4;
 	}
@@ -232,7 +232,7 @@ public class Phong implements java.io.Serializable {
 		this.mota4 = mota4;
 	}
 
-	@Column(name = "mota5", nullable = false)
+	@Column(name = "mota5")
 	public String getMota5() {
 		return this.mota5;
 	}
@@ -241,7 +241,7 @@ public class Phong implements java.io.Serializable {
 		this.mota5 = mota5;
 	}
 
-	@Column(name = "mota6", nullable = false)
+	@Column(name = "mota6")
 	public String getMota6() {
 		return this.mota6;
 	}
@@ -250,7 +250,7 @@ public class Phong implements java.io.Serializable {
 		this.mota6 = mota6;
 	}
 
-	@Column(name = "mota7", nullable = false)
+	@Column(name = "mota7")
 	public String getMota7() {
 		return this.mota7;
 	}
@@ -259,7 +259,7 @@ public class Phong implements java.io.Serializable {
 		this.mota7 = mota7;
 	}
 
-	@Column(name = "tienich1", nullable = false)
+	@Column(name = "tienich1")
 	public String getTienich1() {
 		return this.tienich1;
 	}
@@ -268,7 +268,7 @@ public class Phong implements java.io.Serializable {
 		this.tienich1 = tienich1;
 	}
 
-	@Column(name = "tienich2", nullable = false)
+	@Column(name = "tienich2")
 	public String getTienich2() {
 		return this.tienich2;
 	}
@@ -277,7 +277,7 @@ public class Phong implements java.io.Serializable {
 		this.tienich2 = tienich2;
 	}
 
-	@Column(name = "tienich3", nullable = false)
+	@Column(name = "tienich3")
 	public String getTienich3() {
 		return this.tienich3;
 	}
@@ -286,7 +286,7 @@ public class Phong implements java.io.Serializable {
 		this.tienich3 = tienich3;
 	}
 
-	@Column(name = "tienich4", nullable = false)
+	@Column(name = "tienich4")
 	public String getTienich4() {
 		return this.tienich4;
 	}
@@ -295,7 +295,7 @@ public class Phong implements java.io.Serializable {
 		this.tienich4 = tienich4;
 	}
 
-	@Column(name = "tienich5", nullable = false)
+	@Column(name = "tienich5")
 	public String getTienich5() {
 		return this.tienich5;
 	}
@@ -304,7 +304,7 @@ public class Phong implements java.io.Serializable {
 		this.tienich5 = tienich5;
 	}
 
-	@Column(name = "tienich6", nullable = false)
+	@Column(name = "tienich6")
 	public String getTienich6() {
 		return this.tienich6;
 	}
@@ -313,7 +313,7 @@ public class Phong implements java.io.Serializable {
 		this.tienich6 = tienich6;
 	}
 
-	@Column(name = "tienich7", nullable = false)
+	@Column(name = "tienich7")
 	public String getTienich7() {
 		return this.tienich7;
 	}
@@ -322,7 +322,7 @@ public class Phong implements java.io.Serializable {
 		this.tienich7 = tienich7;
 	}
 
-	@Column(name = "tienich8", nullable = false)
+	@Column(name = "tienich8")
 	public String getTienich8() {
 		return this.tienich8;
 	}
@@ -331,7 +331,7 @@ public class Phong implements java.io.Serializable {
 		this.tienich8 = tienich8;
 	}
 
-	@Column(name = "tienich9", nullable = false)
+	@Column(name = "tienich9")
 	public String getTienich9() {
 		return this.tienich9;
 	}
@@ -340,7 +340,7 @@ public class Phong implements java.io.Serializable {
 		this.tienich9 = tienich9;
 	}
 
-	@Column(name = "tienich10", nullable = false)
+	@Column(name = "tienich10")
 	public String getTienich10() {
 		return this.tienich10;
 	}

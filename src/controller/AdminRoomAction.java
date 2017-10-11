@@ -178,6 +178,7 @@ public class AdminRoomAction extends ActionSupport implements ServletRequestAwar
 			return ERROR;
 		}
 		
+		
 		boolean result = roomModel.update(this.loaiphong);
 		if (result) {
 			this.listRoom = roomModel.getRoom();

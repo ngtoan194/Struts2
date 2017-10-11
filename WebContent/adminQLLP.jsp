@@ -33,17 +33,7 @@
 						</div>
 						<!-- End Box Head -->
 						<div>
-							<display:table id="adminroomTable" name="listRoom" varTotals="room" pagesize="4" cellpadding="5px;"
-								cellspacing="5px;" style="margin-top:20px;" requestURI="">
-									<display:column property="maLoai" paramId="maLoai" title="Mã loại phòng"/>
-									<display:column property="tenLoai" title="Tên loại phòng"/>
-									<display:column property="moTa" title="Mô tả"/>
-								
-									<display:column href="adminQLLPupdate.html?maloai=${adminroomTable.maLoai }" value="Sửa" title="" />
-									<display:column value="Xóa" title="" />
-								
-									
-							</display:table>
+					
 						</div>	
 						<!-- Table -->
 						<div class="table1">
@@ -52,8 +42,7 @@
 										<th>Mã loại phòng</th>
 										<th>Tên loại phòng</th>
 										<th>Mô tả</th>
-										<th></th>
-										<th></th>
+										<th>Tùy chọn</th>
 									</tr>
 
 									<c:forEach var="room" items="${listRoom }">
@@ -68,12 +57,14 @@
 												</s:url> 
 												
 												<s:a href="%{updateURL}">Sửa</s:a>
-											</td>
+											
+												|
 												
-												
-											<td><s:url var="deleteURL" value="adminQLLPdelete.html">
+												<s:url var="deleteURL" value="adminQLLPdelete.html">
 													<s:param name="maLoai">${room.maLoai }</s:param>
-												</s:url> <s:a href="%{deleteURL}"
+												</s:url> 
+												
+												<s:a href="%{deleteURL}"
 													onclick="return confirm('Bạn có chắc chắn muốn xóa không?');">Xóa</s:a>
 											</td>
 

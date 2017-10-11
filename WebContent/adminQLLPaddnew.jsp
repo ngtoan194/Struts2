@@ -25,7 +25,11 @@
 					<!-- Box -->
 					<div class="box">
 						<!-- Box Head -->
-
+						<div class="box-head">
+							<div class="left">
+								<img src="css/images/back.png"> <a href="adminQLLP.html">Trở về</a>
+							</div>
+						</div>
 						<!-- End Box Head -->
 
 						<!-- Table -->
